@@ -12,7 +12,7 @@ import Electronics from './components/electronics/electronics';
 import Filter from './components/filter/filter';
 
 function App() {
-  let a = 'a'
+  
   const [data, setData] = useState([])
   const [filter, setFilter] = useState({})
   const [search, setSearch] = useState();
@@ -29,7 +29,7 @@ function App() {
         .get("https://fakestoreapi.com/products")
         .then(response => setData(response.data))
         .catch(error => console.log(error));
-  }, [a])
+  }, ['a'])
   return (
     <div >
       <Header {...{search, setSearch}} />
